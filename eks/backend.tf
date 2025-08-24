@@ -7,12 +7,13 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "dev-srn-tf-bucket"
-    region         = "us-east-1"
-    key            = "eks/terraform.tfstate"
-    dynamodb_table = "Lock-Files"
-    encrypt        = true
-  }
+  bucket         = "dev-srn-tf-bucket-us-east-1"
+  region         = "us-east-1"
+  key            = "eks/terraform.tfstate"
+  dynamodb_table = "Lock-Files"
+  encrypt        = true
+}
+
 }
 
 provider "aws" {
